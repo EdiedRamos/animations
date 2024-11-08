@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  transition-duration: 200ms;
+  transition-property: background-color;
+  border: none;
+  border-radius: 8px;
+  background-color: seagreen;
+  padding: 1rem;
+  color: lightcyan;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: tomato;
+}
