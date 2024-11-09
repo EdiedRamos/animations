@@ -42,10 +42,16 @@ button:hover {
   width: fit-content;
 }
 
+/* 
+  transition shorthand
+  transition: property duration timing-function delay|initial|inherit;
+*/
+
 .move {
-  transition-delay: 1s;
-  transition-duration: 2s;
-  transition-property: transform;
+  /* transition-delay: 200ms; */
+  /* transition-duration: 2s; */
+  /* transition-property: transform width; */
+  transition: transform 2s 200ms, width 2s 200ms;
   border-radius: 8px;
   background-color: darkcyan;
   padding: 1rem;
@@ -56,7 +62,8 @@ button:hover {
 }
 
 .wrapper:hover .move {
-  transform: translateX(600px);
+  transform: translateX(200px);
+  width: 400px;
 }
 
 #ease {
