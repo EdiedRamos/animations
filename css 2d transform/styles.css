@@ -6,7 +6,8 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-h1 {
+h1,
+h2 {
   color: chocolate;
   font-size: 2rem;
   text-align: center;
@@ -49,4 +50,10 @@ h1 {
 
 .skew:hover {
   transform: skew(20deg);
+}
+
+/* origin */
+.origin:hover {
+  transform: rotate(20deg);
+  transform-origin: top left;
 }
