@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+  color: chocolate;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* box styles */
+.box {
+  display: flex;
+  justify-content: center;
+  transition: transform 300ms;
+  /* ! box-shadow is expensive in animations */
+  box-shadow: -5px 5px brown;
+  border-radius: 8px;
+  background-color: chocolate;
+  padding: 1.5rem;
+  width: 300px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.box:hover {
+  transform: translateZ(300px);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  /* * perspective */
+  perspective: 500px;
+  margin: 3rem;
+}
