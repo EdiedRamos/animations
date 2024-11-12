@@ -30,7 +30,8 @@ h2 {
 }
 
 .box:hover {
-  transform: translateZ(300px);
+  transform: rotate3d(1, 1, 1, 65deg);
+  /* transform: rotateY(180deg); */
 }
 
 .container {
