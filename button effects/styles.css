@@ -106,3 +106,47 @@ h2 {
   transition: color 500ms;
   color: white;
 }
+
+/* * two boxes animation */
+
+.btn-two-boxes {
+  transition: color 1s;
+}
+
+.btn-two-boxes:hover {
+  color: white;
+}
+
+.btn-two-boxes::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateX(90deg);
+  z-index: -1;
+  transition: transform 1s;
+  background-color: salmon;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.btn-two-boxes:hover::before {
+  transform: rotateX(0);
+}
+
+.btn-two-boxes::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(90deg);
+  z-index: -1;
+  transition: transform 1s;
+  background-color: salmon;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.btn-two-boxes:hover::after {
+  transform: rotateY(0);
+}
