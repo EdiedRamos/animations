@@ -33,13 +33,26 @@ h2 {
   font-size: 1.5rem;
 }
 
+.btn-purple {
+  outline: 2px solid purple;
+  color: purple;
+}
+
+.btn-tomato {
+  outline: 2px solid tomato;
+  color: tomato;
+}
+
+.btn-salmon {
+  outline: 2px solid salmon;
+  color: salmon;
+}
+
 /* * rotating animation */
 
 .btn-rotate {
   transition: color 1s;
-  outline: 2px solid purple;
   overflow: hidden;
-  color: purple;
 }
 
 .btn-rotate::before {
@@ -68,9 +81,7 @@ h2 {
 
 .btn-swipe {
   transition: color 1s;
-  outline: 2px solid tomato;
   overflow: hidden;
-  color: tomato;
 }
 
 .btn-swipe::before {
