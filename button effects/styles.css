@@ -150,3 +150,14 @@ h2 {
 .btn-two-boxes:hover::after {
   transform: rotateY(0);
 }
+
+/* * stretching animation */
+
+.btn-stretching {
+  transition: all 500ms;
+}
+
+.btn-stretching:hover {
+  font-weight: 700;
+  letter-spacing: 10px;
+}
