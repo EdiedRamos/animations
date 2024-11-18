@@ -161,3 +161,29 @@ h2 {
   font-weight: 700;
   letter-spacing: 10px;
 }
+
+/* * swipe top bottom  */
+
+.btn-swipe-top-bottom {
+  overflow: hidden;
+}
+
+.btn-swipe-top-bottom::before {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: all 500ms;
+  background-color: tomato;
+  width: 100%;
+  height: 100%;
+  content: "Yeah";
+  color: white;
+}
+
+.btn-swipe-top-bottom:hover::before {
+  transform: translateY(0);
+}
