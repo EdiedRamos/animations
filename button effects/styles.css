@@ -122,10 +122,11 @@ h2 {
 /* * two boxes animation */
 
 .btn-two-boxes {
-  transition: color 1s;
+  transition: all 1s;
 }
 
 .btn-two-boxes:hover {
+  background-color: salmon;
   color: white;
 }
 
