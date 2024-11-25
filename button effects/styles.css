@@ -46,17 +46,17 @@ h2 {
 }
 
 .btn-purple {
-  outline: 2px solid purple;
+  border: 2px solid purple;
   color: purple;
 }
 
 .btn-tomato {
-  outline: 2px solid tomato;
+  border: 2px solid tomato;
   color: tomato;
 }
 
 .btn-salmon {
-  outline: 2px solid salmon;
+  border: 2px solid salmon;
   color: salmon;
 }
 
@@ -204,7 +204,7 @@ h2 {
 
 .btn-glowing {
   transition: background-color 200ms;
-  outline: 2px solid #fef2f2;
+  border: 2px solid #fef2f2;
   overflow: hidden;
   color: #fef2f2;
 }
@@ -231,7 +231,7 @@ h2 {
 
 /* * two layers */
 .btn-two-layers {
-  outline: 2px solid black;
+  border: 2px solid black;
   background-color: black;
   overflow: hidden;
   color: black;
@@ -255,8 +255,9 @@ h2 {
 }
 
 .btn-two-layers::after {
-  top: 100%;
-  left: -100%;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, 100%);
   content: "Hover Me";
 }
 
@@ -265,5 +266,5 @@ h2 {
 }
 
 .btn-two-layers:hover::after {
-  transform: translate(100%, -100%);
+  transform: translate(0, 0);
 }
