@@ -13,6 +13,18 @@ h2 {
   text-align: center;
 }
 
+.container--dark {
+  background-color: #1e293b;
+  padding: 2rem;
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -186,4 +198,33 @@ h2 {
 
 .btn-swipe-top-bottom:hover::before {
   transform: translateY(0);
+}
+
+/* * glowing effect  */
+
+.btn-glowing {
+  transition: background-color 200ms;
+  outline: 2px solid #fef2f2;
+  overflow: hidden;
+  color: #fef2f2;
+}
+
+.btn-glowing::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 400ms;
+  background-color: white;
+  padding: 1.2rem;
+  width: 100%;
+  content: "";
+}
+
+.btn-glowing:hover {
+  background-color: #b91c1c;
+}
+
+.btn-glowing:hover::before {
+  transform: translateX(100%) rotate(45deg);
 }
