@@ -228,3 +228,42 @@ h2 {
 .btn-glowing:hover::before {
   transform: translateX(100%) rotate(45deg);
 }
+
+/* * two layers */
+.btn-two-layers {
+  outline: 2px solid black;
+  background-color: black;
+  overflow: hidden;
+  color: black;
+}
+
+.btn-two-layers::before,
+.btn-two-layers::after {
+  display: grid;
+  position: absolute;
+  place-items: center;
+  transition: transform 300ms;
+  background-color: yellow;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-two-layers::before {
+  top: 0;
+  left: 0;
+  content: "Hover Me";
+}
+
+.btn-two-layers::after {
+  top: 100%;
+  left: -100%;
+  content: "Hover Me";
+}
+
+.btn-two-layers:hover::before {
+  transform: translate(100%, -100%);
+}
+
+.btn-two-layers:hover::after {
+  transform: translate(100%, -100%);
+}
