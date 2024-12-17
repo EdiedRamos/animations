@@ -17,7 +17,16 @@ body {
 
 h1 {
   position: relative;
-  cursor: progress;
   font-size: 3em;
   letter-spacing: 0.1em;
+}
+
+h1 span {
+  transition: 500ms;
+  color: gray;
+}
+
+h1:hover span {
+  color: lime;
+  text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0;
 }
