@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: fantasy, monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #282c34;
+  min-height: 100vh;
+}
+
+h2 {
+  position: relative;
+  color: #fff2;
+  font-weight: 500;
+  font-size: 3em;
+  letter-spacing: 0.25em;
+}
+
+@keyframes animateText {
+  0%,
+  20% {
+    color: #fff2;
+  }
+
+  21%,
+  79% {
+    color: #0f0;
+  }
+
+  80%,
+  100% {
+    color: #fff2;
+  }
+}
+
+h2 span {
+  position: relative;
+  animation: animateText 1s linear infinite;
+}
