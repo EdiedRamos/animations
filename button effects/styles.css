@@ -269,3 +269,35 @@ h2 {
 .btn-two-layers:hover::after {
   transform: translate(0, 0);
 }
+
+/* * Text scaling */
+
+.btn-scaling {
+  position: relative;
+  border-color: black;
+  background-color: white;
+  overflow: hidden;
+  color: black;
+}
+
+.btn-scaling::before {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  transform: scale(4);
+  opacity: 0;
+  transition: all 250ms;
+  background-color: #2c2c2c;
+  width: 100%;
+  height: 100%;
+  content: "Hover me";
+  color: white;
+}
+
+.btn-scaling:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
