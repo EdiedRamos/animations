@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.animation-box {
+  animation: moving 3s both 3 alternate-reverse;
+  background-color: orangered;
+  width: 200px;
+  height: 200px;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(500px);
+  }
+
+  50% {
+    transform: translateX(1000px);
+  }
+
+  100% {
+    transform: translate(1000px, 500px);
+  }
+}
