@@ -372,3 +372,55 @@ h2 {
   transition-delay: 150ms;
   background-color: tomato;
 }
+
+/* * Layers swapping */
+
+.btn-layers-swapping {
+  position: relative;
+  background-color: #282c34;
+  color: transparent;
+}
+
+.btn-layers-swapping:before {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  content: "Button";
+  color: white;
+}
+
+.btn-layers-swapping:hover:before {
+  left: 100%;
+  transform: scale(0) rotateY(360deg);
+  opacity: 0;
+}
+
+.btn-layers-swapping:after {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotateY(0deg);
+  opacity: 0;
+  transition: all 500ms;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  content: "Button";
+  color: white;
+}
+
+.btn-layers-swapping:hover:after {
+  left: 0;
+  transform: scale(1) rotateY(360deg);
+  opacity: 1;
+}
