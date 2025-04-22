@@ -424,3 +424,72 @@ h2 {
   transform: scale(1) rotateY(360deg);
   opacity: 1;
 }
+
+/* * 3 circles background effect */
+
+.btn-3-circles-effect {
+  --size: 20px;
+  position: relative;
+  transition: all 250ms;
+  border-radius: 8px;
+  padding: 1rem 3rem;
+}
+
+.btn-3-circles-effect:hover {
+  transition-delay: 250ms;
+  color: white;
+}
+
+.btn-3-circles-effect span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-3-circles-effect:hover span {
+  transition-delay: 250ms;
+  background-color: #282c34;
+}
+
+.btn-3-circles-effect::before,
+.btn-3-circles-effect::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: -1;
+  transition: all 250ms;
+  border-radius: 50%;
+  background-color: #282c34;
+  width: var(--size);
+  height: var(--size);
+  content: "";
+}
+
+.btn-3-circles-effect::before {
+  left: 0;
+  box-shadow: -100px 0 0 #282c34;
+}
+
+.btn-3-circles-effect::after {
+  right: 0;
+  box-shadow: 100px 0 0 #282c34;
+}
+
+.btn-3-circles-effect:hover::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  box-shadow: 30px 0 0 #282c34;
+}
+
+.btn-3-circles-effect:hover::after {
+  right: 50%;
+  transform: translate(50%, -50%);
+  opacity: 1;
+  box-shadow: -30px 0 0 #282c34;
+}
