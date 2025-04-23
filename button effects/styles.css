@@ -493,3 +493,52 @@ h2 {
   opacity: 1;
   box-shadow: -30px 0 0 #282c34;
 }
+
+/* * Creative hover effect */
+
+.btn-creative-hover-effect {
+  position: relative;
+  transition: all 250ms;
+  color: white;
+}
+
+.btn-creative-hover-effect::before,
+.btn-creative-hover-effect::after {
+  position: absolute;
+  z-index: -1;
+  transition: all 250ms;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.btn-creative-hover-effect::before {
+  top: -3px;
+  left: -3px;
+  background-color: #e5c07b;
+}
+
+.btn-creative-hover-effect:hover {
+  color: #282c34;
+}
+
+.btn-creative-hover-effect:hover::before {
+  top: -6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(75deg);
+  transform-origin: top;
+}
+
+.btn-creative-hover-effect:hover::after {
+  top: 6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(-75deg);
+  transform-origin: bottom;
+}
+
+.btn-creative-hover-effect::after {
+  top: 3px;
+  left: 3px;
+  mix-blend-mode: multiply;
+  background-color: #61afef;
+}
