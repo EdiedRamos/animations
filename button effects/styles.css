@@ -542,3 +542,68 @@ h2 {
   mix-blend-mode: multiply;
   background-color: #61afef;
 }
+
+/* * Splited button effect */
+
+.btn-splited-effect {
+  position: relative;
+  border: 2px solid #e5c07b;
+  overflow: hidden;
+}
+
+.btn-splited-effect::before,
+.btn-splited-effect::after,
+.btn-splited-effect span::before,
+.btn-splited-effect span::after {
+  position: absolute;
+  z-index: -1;
+  transition: all 250ms;
+  background-color: #e5c07b;
+  width: 25%;
+  height: 100%;
+  content: "";
+}
+
+.btn-splited-effect::before {
+  top: 0;
+  left: -25%;
+}
+
+.btn-splited-effect::after {
+  top: -100%;
+  left: 25%;
+}
+
+.btn-splited-effect:hover::before {
+  left: 0;
+}
+
+.btn-splited-effect:hover::after {
+  top: 0;
+  transition-delay: 50ms;
+}
+
+.btn-splited-effect span::before {
+  top: 100%;
+  left: 50%;
+}
+
+.btn-splited-effect:hover span::before {
+  top: 0;
+  transition-delay: 100ms;
+}
+
+.btn-splited-effect span::after {
+  top: 0;
+  left: 100%;
+}
+
+.btn-splited-effect:hover span::after {
+  top: 0;
+  left: 75%;
+  transition-delay: 150ms;
+}
+
+.btn-splited-effect:hover span {
+  color: white;
+}
