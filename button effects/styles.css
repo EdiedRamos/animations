@@ -619,8 +619,8 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
   transition: all 500ms;
+  content: "";
 }
 
 .btn-border-swapping-effect::before {
@@ -646,4 +646,41 @@ h2 {
 .btn-border-swapping-effect:hover::after {
   transform: rotateY(180deg);
   transition-delay: 250ms;
+}
+
+/* * Border growing button effect */
+
+.btn-border-growing-effect {
+  --yellow: #e5c07b;
+  position: relative;
+  border: 1px solid var(--yellow);
+}
+
+.btn-border-growing-effect::before,
+.btn-border-growing-effect::after {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  content: "";
+  transition: all 250ms;
+}
+
+.btn-border-growing-effect::before {
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid var(--yellow);
+  border-left: 2px solid var(--yellow);
+}
+
+.btn-border-growing-effect::after {
+  right: -5px;
+  bottom: -5px;
+  border-right: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+}
+
+.btn-border-growing-effect:hover::before,
+.btn-border-growing-effect:hover::after {
+  width: 100%;
+  height: 100%;
 }
