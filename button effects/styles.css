@@ -12,6 +12,7 @@
   --purple: #c678dd;
   --cyan: #56b6c2;
   --gray: #abb2bf;
+  --white: #f2f4f5;
 }
 
 h1,
@@ -931,4 +932,57 @@ h2 {
 .btn-pulsing-effect:active {
   transform: translateY(0);
   box-shadow: 0 5px 20px var(--gray);
+}
+
+/* * diagonal swipe effect */
+
+.btn-diagonal-effect {
+  position: relative;
+  transition: all 0.5s;
+  border: 4px solid var(--purple);
+  width: 250px;
+  height: 80px;
+  overflow: hidden;
+  color: var(--purple);
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-diagonal-effect:hover {
+  color: var(--white);
+}
+
+.btn-diagonal-effect::before {
+  position: absolute;
+  transform: translateX(-100%);
+  z-index: -1;
+  transition: all 0.5s;
+  inset: 0;
+  border-top: 36px solid var(--purple);
+  border-right: 36px solid transparent;
+  border-bottom: 36px solid var(--purple);
+  content: "";
+}
+
+.btn-diagonal-effect:hover::before {
+  transform: translateX(0);
+}
+
+.btn-diagonal-effect::after {
+  position: absolute;
+  transform: translateX(100%);
+  z-index: -1;
+  transition: all 0.5s;
+  inset: 0;
+  border-top: 36px solid var(--purple);
+  border-bottom: 36px solid var(--purple);
+  border-left: 36px solid transparent;
+  content: "";
+}
+
+.btn-diagonal-effect:hover::after {
+  transform: translateX(0);
 }
