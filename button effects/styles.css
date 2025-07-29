@@ -53,6 +53,10 @@ h2 {
   height: 125px;
 }
 
+.content-wrapper--m {
+  height: 200px;
+}
+
 .btn {
   position: relative;
   cursor: pointer;
@@ -985,4 +989,114 @@ h2 {
 
 .btn-diagonal-effect:hover::after {
   transform: translateX(0);
+}
+
+/* * 4 lines effect */
+
+.btn-4-lines-effect {
+  position: relative;
+  z-index: 0;
+  transition: 0.5s;
+  border: 2px solid var(--blue);
+  padding: 20px 35px;
+  color: var(--blue);
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-4-lines-effect:hover {
+  border: 2px solid transparent;
+  color: var(--dark);
+}
+
+.btn-4-lines-effect::before {
+  position: absolute;
+  transform: scale(0);
+  z-index: -1;
+  transition: 0.5s;
+  inset: 0;
+  background: var(--blue);
+  content: '';
+}
+
+.btn-4-lines-effect:hover::before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 10px var(--blue), 0 0 30px var(--blue), 0 0 60px var(--blue);
+}
+
+.btn-4-lines-effect span {
+  position: absolute;
+  box-shadow: 0 0 4px var(--blue), 0 0 10px var(--blue), 0 0 15px var(--blue);
+  background: var(--blue);
+}
+
+.btn-4-lines-effect span:nth-child(1),
+.btn-4-lines-effect span:nth-child(3) {
+  width: 40px;
+  height: 4px;
+}
+
+.btn-4-lines-effect span:nth-child(2),
+.btn-4-lines-effect span:nth-child(4) {
+  width: 4px;
+  height: 40px;
+}
+
+.btn-4-lines-effect span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -50px;
+  transform-origin: left;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+
+.btn-4-lines-effect:hover span:nth-child(1) {
+  left: 50%;
+  transform: scaleX(0);
+  transition-delay: 0.25s;
+}
+
+.btn-4-lines-effect span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -50px;
+  transform-origin: right;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+
+.btn-4-lines-effect:hover span:nth-child(3) {
+  right: 50%;
+  transform: scaleX(0);
+  transition-delay: 0.25s;
+}
+
+.btn-4-lines-effect span:nth-child(2) {
+  top: -50px;
+  left: calc(50% - 2px);
+  transform-origin: top;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+
+.btn-4-lines-effect:hover span:nth-child(2) {
+  top: 50%;
+  transform: scaleY(0);
+  transition-delay: 0.25s;
+}
+
+.btn-4-lines-effect span:nth-child(4) {
+  bottom: -50px;
+  left: calc(50% - 2px);
+  transform-origin: bottom;
+  transition: 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+
+.btn-4-lines-effect:hover span:nth-child(4) {
+  bottom: 50%;
+  transform: scaleY(0);
+  transition-delay: 0.25s;
 }
